@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import "../css/Weather.css";
+import "../css/WeatherRandomCity.css"
+import "../css/Navbar.css"
 
 import search_icon from "../assets/search.png";
 import clear_icon from "../assets/clear.png";
@@ -115,9 +118,9 @@ const Weather = () => {
         </div>
         {weatherData ? (
           <>
-            <img src={weatherData.icon} alt="" className="weather-icon" />
-            <p className="temperature">{weatherData.temperature}°c</p>
-            <p className="location">{weatherData.location}</p>
+            <img src={weatherData.icon} alt="" className="weather-icon-principal" />
+            <p className="temperature-principal">{weatherData.temperature}°c</p>
+            <p className="location-principal">{weatherData.location}</p>
             <div className="weather-data">
               <div className="col">
                 <img src={humidity_icon} alt="" />

@@ -8,27 +8,6 @@
     align-items: center;
 }
 
-.navbar {
-    width: 100%;
-    background-color: #1a205a;
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 15px 0 25px;
-}
-
-.navbar a:hover {
-    color: #fffb00;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -75,15 +54,15 @@
     margin: 30px 0;
 }
 
-.temperature {
+.temperature-principal {
     color: white;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1;
 }
 
-.location {
+.location-principal {
     color: white;
-    font-size: 40px;
+    font-size: 40px; 
     margin-bottom: 10px; 
 }
 
@@ -110,113 +89,4 @@
 
 .weather-data .col img {
     width: 26px;
-}
-
-.random-weather {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 20px; /* Espacio entre las tarjetas */
-    margin-top: 50px;
-    color: white;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas más pequeñas */
-}
-
-.random-weather-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo opcional */
-    padding: 10px;
-    border-radius: 8px;
-    flex: 1; /* Para que las tarjetas se ajusten al espacio disponible */
-    max-width: 30%; /* Limita el ancho máximo de cada tarjeta */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-}
-
-.weather-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.weather-icon {
-    width: 80px;
-}
-
-.temperature,
-.location {
-    font-size: 20px;
-    text-align: center;
-}
-
-.weather-extra {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.weather-extra .col {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px; /* Tamaño de fuente más pequeño para las tarjetas */
-}
-
-.weather-extra .col img {
-    width: 20px;
-}
-
-.weather-extra .col span {
-    font-size: 12px;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .random-weather-item {
-        max-width: 45%; /* Ajuste para pantallas más pequeñas */
-    }
-
-    .weather-icon {
-        width: 60px;
-    }
-
-    .temperature,
-    .location {
-        font-size: 18px;
-    }
-
-    .weather-extra .col {
-        font-size: 12px;
-    }
-
-    .weather-extra .col img {
-        width: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .random-weather-item {
-        max-width: 100%; /* Ajuste completo para pantallas muy pequeñas */
-    }
-
-    .weather-icon {
-        width: 50px;
-    }
-
-    .temperature,
-    .location {
-        font-size: 16px;
-    }
-
-    .weather-extra .col {
-        font-size: 10px;
-    }
-
-    .weather-extra .col img {
-        width: 16px;
-    }
 }
