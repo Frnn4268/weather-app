@@ -5,6 +5,7 @@ const InformationPage = () => {
   return (
     <div className="information-page">
       <h1>About This Weather App</h1>
+      <img className="information-image" src="../../public/unicorn-weather.png" />
       <section>
         <h2>Overview</h2>
         <p>
@@ -18,19 +19,37 @@ const InformationPage = () => {
         <h2>Key Features</h2>
         <ul>
           <li>Search for weather by city name</li>
-          <li>View detailed weather data including wind speed, humidity, and temperature</li>
-          <li>Display random weather information for popular cities like Tokyo, Paris, and New York</li>
-          <li>Responsive design with adaptive layouts for different screen sizes</li>
+          <li>
+            View detailed weather data including wind speed, humidity, and
+            temperature
+          </li>
+          <li>
+            Display random weather information for popular cities like Tokyo,
+            Paris, and New York
+          </li>
+          <li>
+            Responsive design with adaptive layouts for different screen sizes
+          </li>
           <li>Real-time weather data fetched from the OpenWeather API</li>
         </ul>
       </section>
       <section>
         <h2>Technologies Used</h2>
         <ul>
-          <li><strong>React:</strong> Frontend library for building user interfaces</li>
-          <li><strong>CSS Modules:</strong> For styling components with scoped CSS</li>
-          <li><strong>OpenWeather API:</strong> To fetch real-time weather data</li>
-          <li><strong>React Toastify:</strong> For showing notifications and alerts</li>
+          <li>
+            <strong>React:</strong> Frontend library for building user
+            interfaces
+          </li>
+          <li>
+            <strong>CSS Modules:</strong> For styling components with scoped CSS
+          </li>
+          <li>
+            <strong>OpenWeather API:</strong> To fetch real-time weather data
+          </li>
+          <li>
+            <strong>React Toastify:</strong> For showing notifications and
+            alerts
+          </li>
         </ul>
       </section>
       <section>
