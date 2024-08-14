@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 import "../css/Weather.css";
+
 import search_icon from "../assets/search.png";
 import clear_icon from "../assets/clear.png";
 import cloud_icon from "../assets/cloud.png";
-import searc_icon from "../assets/search.png";
 import drizzle_icon from "../assets/drizzle.png";
 import rain_icon from "../assets/rain.png";
 import snow_icon from "../assets/snow.png";
@@ -34,7 +36,7 @@ const Weather = () => {
 
   const search = async (city) => {
     if (city === "") {
-      alert("Enter City Name");
+      toast.warn("Enter city name :)");
       return;
     }
 
@@ -47,7 +49,7 @@ const Weather = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        alert(data.message);
+        toast.error("City not found :(");
         return;
       }
 
@@ -61,6 +63,7 @@ const Weather = () => {
       });
     } catch (error) {
       setWeatherData(false);
+      toast.error("Error while fetching weather data");
       console.error("Error while fetching weather data", error);
     }
   };
@@ -104,6 +107,7 @@ const Weather = () => {
       ) : (
         <></>
       )}
+      <ToastContainer />
     </div>
   );
 };
