@@ -9,6 +9,7 @@ import WeatherData from "../components/WeatherData";
 import RandomWeather from "../components/RandomWeather";
 
 import "../css/Weather.css";
+
 import clear_icon from "../assets/clear.png";
 import cloud_icon from "../assets/cloud.png";
 import drizzle_icon from "../assets/drizzle.png";

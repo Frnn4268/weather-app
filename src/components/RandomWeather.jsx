@@ -19,14 +19,14 @@ const RandomWeather = ({ randomWeather }) => {
                 <img src={humidity_icon} alt="humidity-icon" />
                 <div>
                   <p>{weather.humidity} %</p>
-                  <span>Humedad</span>
+                  <span>Humidity</span>
                 </div>
               </div>
               <div className="col">
                 <img src={wind_icon} alt="wind-icon" />
                 <div>
                   <p>{weather.windSpeed} Km/h</p>
-                  <span>Velocidad del Viento</span>
+                  <span>Wind speed</span>
                 </div>
               </div>
             </div>
