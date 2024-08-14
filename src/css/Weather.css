@@ -8,6 +8,26 @@
     align-items: center;
 }
 
+.navbar {
+    width: 100%;
+    background-color: #1a205a;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffde59;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
