@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
-import WeatherMain from "./WeatherMain";
-import WeatherData from "./WeatherData";
-import RandomWeather from "./RandomWeather";
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
+import WeatherMain from "../components/WeatherMain";
+import WeatherData from "../components/WeatherData";
+import RandomWeather from "../components/RandomWeather";
 
 import "../css/Weather.css";
 import clear_icon from "../assets/clear.png";

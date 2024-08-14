@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <a href="#home">Inicio</a>
-      <a href="#detailed-weather">Clima Detallado</a>
-      <a href="#information">Información</a>
+      <Link to="/">Home</Link>
+      <Link to="/detailed-weather">Detailed Weather</Link>
+      <Link to="/information">Information</Link>
     </nav>
   );
 };
