@@ -1,7 +1,7 @@
 .weather {
     place-self: center;
     padding: 40px;
-    border-radius: 50px;
+    border-radius: 0;
     background-image: linear-gradient(45deg, #1a205a, #0a3de4);
     display: flex;
     flex-direction: column;
@@ -25,16 +25,18 @@
 }
 
 .navbar a:hover {
-    color: #ffde59;
+    color: #ebe708;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 30px; /* Espacio entre la barra de búsqueda y el clima principal */
 }
 
 .search-bar input {
+    width: 500px;
     height: 50px;
     border: none;
     outline: none;
@@ -43,6 +45,20 @@
     color: black;
     background: white;
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .search-bar input {
+        max-width: 300px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        max-width: 250px;
+        font-size: 14px;
+    }
 }
 
 .search-bar img {
@@ -67,21 +83,23 @@
 .location {
     color: white;
     font-size: 40px;
+    margin-bottom: 10px; /* Espacio entre la ubicación y los datos del clima */
 }
 
 .weather-data {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px; /* Ajustado para menor separación entre la ciudad y los datos del clima */
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centrar los datos dentro del contenedor */
 }
 
 .weather-data .col {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     font-size: 22px;
+    margin: 0 10px; /* Espacio entre las columnas de humedad y viento */
 }
 
 .weather-data .col span {
@@ -91,5 +109,29 @@
 
 .weather-data .col img {
     width: 26px;
-    margin-top: 10px;
+}
+
+.random-weather {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    color: white;
+    border-radius: 100px;
+}
+
+.random-weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.random-weather-item .weather-icon {
+    width: 80px;
+}
+
+.random-weather-item .temperature,
+.random-weather-item .location {
+    font-size: 20px;
+    text-align: center;
 }

@@ -16,6 +16,7 @@ const Weather = () => {
   const inputRef = useRef();
 
   const [weatherData, setWeatherData] = useState(false);
+  const [randomWeather, setRandomWeather] = useState([]);
 
   const allIcons = {
     "01d": clear_icon,
@@ -68,8 +69,29 @@ const Weather = () => {
     }
   };
 
+  const fetchRandomWeather = async () => {
+    const randomCities = ["Tokyo", "Paris", "New York"]; // Lugares aleatorios
+    const weatherPromises = randomCities.map(async (city) => {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${
+        import.meta.env.VITE_APP_WEATHER_ID
+      }`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+      return {
+        location: data.name,
+        temperature: Math.floor(data.main.temp),
+        icon: allIcons[data.weather[0].icon] || clear_icon,
+      };
+    });
+
+    const randomWeatherData = await Promise.all(weatherPromises);
+    setRandomWeather(randomWeatherData);
+  };
+
   useEffect(() => {
     search("Guatemala");
+    fetchRandomWeather();
   }, []);
 
   return (
@@ -109,6 +131,15 @@ const Weather = () => {
                   <span>Wind Speed</span>
                 </div>
               </div>
+            </div>
+            <div className="random-weather">
+              {randomWeather.map((weather, index) => (
+                <div key={index} className="random-weather-item">
+                  <img src={weather.icon} alt="" className="weather-icon" />
+                  <p className="temperature">{weather.temperature}°c</p>
+                  <p className="location">{weather.location}</p>
+                </div>
+              ))}
             </div>
           </>
         ) : (
