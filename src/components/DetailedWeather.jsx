@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../css/DetailedWeather.css"
+
 const DetailedWeather = ({ weatherData }) => {
   if (!weatherData) {
     return <div>There is not data available to show.</div>;
