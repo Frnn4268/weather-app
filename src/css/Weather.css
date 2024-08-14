@@ -22,17 +22,18 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    margin: 0 15px 0 25px;
 }
 
 .navbar a:hover {
-    color: #ebe708;
+    color: #fffb00;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 30px; /* Espacio entre la barra de búsqueda y el clima principal */
+    margin-bottom: 30px; 
 }
 
 .search-bar input {
@@ -83,15 +84,15 @@
 .location {
     color: white;
     font-size: 40px;
-    margin-bottom: 10px; /* Espacio entre la ubicación y los datos del clima */
+    margin-bottom: 10px; 
 }
 
 .weather-data {
     width: 100%;
-    margin-top: 20px; /* Ajustado para menor separación entre la ciudad y los datos del clima */
+    margin-top: 20px; 
     color: white;
     display: flex;
-    justify-content: center; /* Centrar los datos dentro del contenedor */
+    justify-content: center; 
 }
 
 .weather-data .col {
@@ -99,7 +100,7 @@
     align-items: center;
     gap: 12px;
     font-size: 22px;
-    margin: 0 10px; /* Espacio entre las columnas de humedad y viento */
+    margin: 0 10px; 
 }
 
 .weather-data .col span {
@@ -115,23 +116,107 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 20px; /* Espacio entre las tarjetas */
     margin-top: 50px;
     color: white;
-    border-radius: 100px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas más pequeñas */
 }
 
 .random-weather-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo opcional */
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1; /* Para que las tarjetas se ajusten al espacio disponible */
+    max-width: 30%; /* Limita el ancho máximo de cada tarjeta */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
-.random-weather-item .weather-icon {
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.weather-icon {
     width: 80px;
 }
 
-.random-weather-item .temperature,
-.random-weather-item .location {
+.temperature,
+.location {
     font-size: 20px;
     text-align: center;
+}
+
+.weather-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-extra .col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px; /* Tamaño de fuente más pequeño para las tarjetas */
+}
+
+.weather-extra .col img {
+    width: 20px;
+}
+
+.weather-extra .col span {
+    font-size: 12px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .random-weather-item {
+        max-width: 45%; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .weather-icon {
+        width: 60px;
+    }
+
+    .temperature,
+    .location {
+        font-size: 18px;
+    }
+
+    .weather-extra .col {
+        font-size: 12px;
+    }
+
+    .weather-extra .col img {
+        width: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .random-weather-item {
+        max-width: 100%; /* Ajuste completo para pantallas muy pequeñas */
+    }
+
+    .weather-icon {
+        width: 50px;
+    }
+
+    .temperature,
+    .location {
+        font-size: 16px;
+    }
+
+    .weather-extra .col {
+        font-size: 10px;
+    }
+
+    .weather-extra .col img {
+        width: 16px;
+    }
 }

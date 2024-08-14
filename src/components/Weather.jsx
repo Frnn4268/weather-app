@@ -81,6 +81,8 @@ const Weather = () => {
       return {
         location: data.name,
         temperature: Math.floor(data.main.temp),
+        humidity: data.main.humidity,
+        windSpeed: data.wind.speed,
         icon: allIcons[data.weather[0].icon] || clear_icon,
       };
     });
@@ -97,9 +99,9 @@ const Weather = () => {
   return (
     <div>
       <nav className="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#informacion">Información</a>
+        <a href="#home">Home</a>
+        <a href="#detailed-weather">Detailed weather</a>
+        <a href="#information">Information</a>
       </nav>
       <div className="weather">
         <div className="search-bar">
@@ -135,9 +137,29 @@ const Weather = () => {
             <div className="random-weather">
               {randomWeather.map((weather, index) => (
                 <div key={index} className="random-weather-item">
-                  <img src={weather.icon} alt="" className="weather-icon" />
-                  <p className="temperature">{weather.temperature}°c</p>
-                  <p className="location">{weather.location}</p>
+                  <div className="weather-info">
+                    <div className="weather-main">
+                      <img src={weather.icon} alt="" className="weather-icon" />
+                      <p className="temperature">{weather.temperature}°c</p>
+                      <p className="location">{weather.location}</p>
+                    </div>
+                    <div className="weather-extra">
+                      <div className="col">
+                        <img src={humidity_icon} alt="" />
+                        <div>
+                          <p>{weather.humidity} %</p>
+                          <span>Humidity</span>
+                        </div>
+                      </div>
+                      <div className="col">
+                        <img src={wind_icon} alt="" />
+                        <div>
+                          <p>{weather.windSpeed} Km/h</p>
+                          <span>Wind Speed</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
