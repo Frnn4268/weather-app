@@ -78,7 +78,8 @@ const Weather = () => {
         <input ref={inputRef} type="text" placeholder="Search" />
         <img
           src={search_icon}
-          alt=""
+          alt="search-icon"
+          data-testid="search-button"
           onClick={() => search(inputRef.current.value)}
         />
       </div>
