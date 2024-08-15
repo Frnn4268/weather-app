@@ -68,6 +68,22 @@ If you prefer to run the application using Docker, follow these steps:
 
 The application will be available at `http://localhost:3000`.
 
+### Run the Application with Docker Compose
+
+To run the application using Docker Compose, follow these steps:
+
+1. Build and Start the Services
+
+	> docker-compose up --build
+
+This command will build the Docker image if it doesn't already exist and start the container. The application will be available at `http://localhost:3000`.
+
+2. Stopping the Services
+
+To stop the running services, use the following command:
+
+	> docker-compose down
+
 ### Configuration
 
 Update the `.env` file in the root of the project to include your OpenWeather API key and any other environment-specific variables.
@@ -82,6 +98,3 @@ Update the `.env` file in the root of the project to include your OpenWeather AP
 - **Getting Started**: Steps to set up and run the project locally.
 - **Docker Instructions**: Instructions for running the app using Docker.
 - **Configuration**: How to set up environment variables.
-
-
-
