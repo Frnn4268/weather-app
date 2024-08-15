@@ -76,11 +76,11 @@ To run the application using Docker Compose, follow these steps:
 
 	> docker-compose up --build
 
-This command will build the Docker image if it doesn't already exist and start the container. The application will be available at `http://localhost:3000`.
+	This command will build the Docker image if it doesn't already exist and start the container. The application will be available at `http://localhost:3000`.
 
 2. Stopping the Services
 
-To stop the running services, use the following command:
+	To stop the running services, use the following command:
 
 	> docker-compose down
 
