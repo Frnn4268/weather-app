@@ -23,7 +23,7 @@ A simple weather application built using React and Vite.js. This app allows user
 To get started with this project, follow these steps:
 
 
-## Prerequisites
+### Prerequisites
 
 Make sure you have the following installed on your machine:
 
