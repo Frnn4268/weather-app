@@ -23,7 +23,7 @@ A simple weather application built using React and Vite.js. This app allows user
 To get started with this project, follow these steps:
 
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have the following installed on your machine:
 
@@ -64,7 +64,7 @@ To build the application for production, use the following command:
 The production build will be generated in the `dist` directory.
 
 
-### Run the Application with Docker
+## Run the Application with Docker
 
 If you prefer to run the application using Docker, follow these steps:
 
@@ -77,7 +77,7 @@ If you prefer to run the application using Docker, follow these steps:
 The application will be available at `http://localhost:3000`.
 
 
-#### - Run the Application with Docker Compose
+### Run the Application with Docker Compose
 
 To run the application using Docker Compose, follow these steps:
 
@@ -94,14 +94,14 @@ To run the application using Docker Compose, follow these steps:
 	> docker-compose down
 
 
-### Configuration
+## Configuration
 
 Update the `.env` file in the root of the project to include your OpenWeather API key and any other environment-specific variables.
 
     VITE_APP_WEATHER_ID="your_OpenWeather_Api_key"
 
 
-### Explanation
+## Explanation
 
 - **Project Overview**: A brief description of what the project does.
 - **Features**: Key features of the application.
