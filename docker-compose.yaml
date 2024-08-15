@@ -1,0 +1,25 @@
+# Specifies the version of the Docker Compose file format
+version: '3.4'
+
+services:
+  # Defines a service named 'weather-app'
+  weather-app:
+    # The name of the image to use for this service
+    image: weather-app
+    
+    # Configuration for building the Docker image
+    build:
+      # The build context, which is the directory containing the Dockerfile
+      context: .
+      # Path to the Dockerfile used for building the image
+      dockerfile: ./Dockerfile
+
+    # Environment variables to set inside the container
+    environment:
+      # Sets the NODE_ENV variable to 'production'
+      NODE_ENV: production
+
+    # Ports to map between the host and the container
+    ports:
+      # Maps port 3000 on the host to port 3000 in the container
+      - 3000:3000
