@@ -34,13 +34,13 @@ Clone the repository using Git:
     git clone https://github.com/Frnn4268/weather-app.git
     cd weather-app
 
-#### Install Dependencies
+### Install Dependencies
 
 Install the required dependencies using npm:
 
 > npm install
 
-#### Run the Application Locally
+### Run the Application Locally
 
 To run the application locally in development mode, use the following command:
 
@@ -48,7 +48,7 @@ To run the application locally in development mode, use the following command:
 
 The application will be available at  `http://localhost:8080/`
 
-#### Build the Application
+### Build the Application
 
 To build the application for production, use the following command:
 
@@ -56,7 +56,7 @@ To build the application for production, use the following command:
 
 The production build will be generated in the `dist` directory.
 
-#### Run the Application with Docker
+### Run the Application with Docker
 
 If you prefer to run the application using Docker, follow these steps:
 
