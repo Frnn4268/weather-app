@@ -43,14 +43,14 @@ Clone the repository using Git:
 
 Install the required dependencies using npm:
 
-	> npm install
+> npm install
 
 
 ### Run the Application Locally
 
 To run the application locally in development mode, use the following command:
 
-	> npm run dev
+> npm run dev
 
 The application will be available at  `http://localhost:8080/`
 
@@ -59,7 +59,7 @@ The application will be available at  `http://localhost:8080/`
 
 To build the application for production, use the following command:
 
-	>  npm run build
+>  npm run build
 
 The production build will be generated in the `dist` directory.
 
