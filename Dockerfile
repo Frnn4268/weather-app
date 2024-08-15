@@ -24,4 +24,3 @@ EXPOSE 3000
 
 # Define the command to run the application using the 'serve' package to serve the built files from the 'dist' directory
 CMD [ "serve", "-s", "dist" ]
-
